@@ -5,10 +5,10 @@ sprites.onOverlap(SpriteKind.Guard, SpriteKind.Enemy, function (sprite, otherSpr
 info.onScore(20, function () {
     Namor.destroy()
     scene.setBackgroundImage(assets.image`boston-bridge`)
-    game.over(true)
     effects.confetti.startScreenEffect()
-    game.showLongText("We are safe!", DialogLayout.Bottom)
     Shuri.sayText("WAKANDA FOREVER", 5000, false)
+    game.showLongText("We are safe!", DialogLayout.Bottom)
+    game.over(true)
 })
 sprites.onOverlap(SpriteKind.Player, SpriteKind.Enemy, function (sprite, otherSprite) {
     info.changeLifeBy(-1)
